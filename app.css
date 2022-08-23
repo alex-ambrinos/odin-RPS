@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #313131;
+}
+
+.logo {
+    text-align: center;
+    padding: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+}
+
+#game {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #232323;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.description {
+    text-align: center;
+    color: #8e8e8e;
+    padding-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.rock,
+.paper,
+.scissors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    width: 80px;
+    padding-bottom: 15px;
+}
+
+button {
+    padding: 10px 40px;
+    border: 2px solid white;
+    color: white;
+    background-color: #232323;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: white;
+    color: #232323;
+}
+
+#scoreBoard {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: #232323;
+    color: white;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.player,
+.computer {
+    color: #8e8e8e;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.playerScore,
+.computerScore {
+    font-size: 40px;
+    color: white;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+footer {
+    display: flex;
+    background-color: #232323;
+    color: #8e8e8e;
+    font-size: 14px;
+
+    align-items: center;
+    justify-content: center;
+    padding: 25px 0;
+    margin-top: auto;
+}

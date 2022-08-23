@@ -7,36 +7,73 @@ function getComputerChoice() {
     }
 }
 
-let playerSelection = prompt("Enter Rock, Paper or Scissors").toUpperCase();
-while (playerSelection !== 'PAPER' && playerSelection !== 'ROCK' && playerSelection !== 'SCISSORS') {
-    playerSelection = prompt("Please enter a valid choise: Rock, Paper or Scissors").toUpperCase();
+let computerSelection = "";
+let playerSelection = "";
+let playerScore = 0;
+let computerScore = 0;
+
+const playerScoreboard = document.querySelector('.playerScore');
+const computerScoreboard = document.querySelector('.computerScore');
+
+function scoreKeeper(outcome) {
+    if (playerScore < 5 && computerScore < 5)
+        if (outcome === 'computer') {
+            computerScore += 1;
+            computerScoreboard.textContent = computerScore;
+        }
+        else if (outcome === 'player') {
+            playerScore += 1;
+            playerScoreboard.textContent = playerScore;
+        }
+        else console.log("Tie!");
+
+    if (playerScore === 5) console.log("Player Wins");
+    else if (computerScore === 5) console.log("Computer Wins");
 }
-let computerSelection = getComputerChoice();
+
+const btn1 = document.querySelector(".rock");
+btn1.addEventListener('click', () => {
+    playerSelection = "ROCK";
+    computerSelection = getComputerChoice();
+    let outcome = playRound(playerSelection, computerSelection);
+    scoreKeeper(outcome);
+});
+const btn2 = document.querySelector(".paper");
+btn2.addEventListener('click', () => {
+    playerSelection = "PAPER";
+    computerSelection = getComputerChoice();
+    let outcome = playRound(playerSelection, computerSelection);
+    scoreKeeper(outcome);
+});
+const btn3 = document.querySelector(".scissors");
+btn3.addEventListener('click', () => {
+    playerSelection = "SCISSORS";
+    computerSelection = getComputerChoice();
+    let outcome = playRound(playerSelection, computerSelection);
+    scoreKeeper(outcome);
+});
+
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toUpperCase() === computerSelection.toUpperCase()) {
-        return 'Tie!';
+        return 'tie';
     }
     if (playerSelection === 'ROCK' && computerSelection === 'PAPER') {
-        return 'You Lose! Paper beats Rock!';
+        return 'computer';
     }
     if (playerSelection === 'ROCK' && computerSelection === 'SCISSORS') {
-        return 'You Win! Rock beats Scissors!';
+        return 'player';
     }
     if (playerSelection === 'PAPER' && computerSelection === 'ROCK') {
-        return 'You Win! Paper beats Rock!';
+        return 'player';
     }
     if (playerSelection === 'PAPER' && computerSelection === 'SCISSORS') {
-        return 'You Lose! Scissors beats Paper!';
+        return 'computer';
     }
     if (playerSelection === 'SCISSORS' && computerSelection === 'ROCK') {
-        return 'You Lose! Rock beats Scissors!';
+        return 'computer';
     }
     if (playerSelection === 'SCISSORS' && computerSelection === 'PAPER') {
-        return 'You win! Scissors beats Paper!';
+        return 'player';
     }
 }
-
-console.log(`Player choise: ${playerSelection}`);
-console.log(`Computer choise: ${computerSelection}`);
-console.log(playRound(playerSelection, computerSelection));

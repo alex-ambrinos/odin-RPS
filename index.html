@@ -5,12 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="app.css">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
-    <h1>Rock Paper Scissors</h1>
+    <h1 class="logo">Rock Paper Scissors</h1>
+    <div id="game">
+        <h2 class="description">Choose your weapon</h2>
+        <div class="buttons">
+            <div class="rock">
+                <img src="/img/rock.png" alt="ROCK Image">
+                <button class="rock">Rock</button>
+            </div>
+            <div class="paper">
+                <img src="/img/paper.png" alt="PAPER Image">
+                <button class="paper">Paper</button>
+            </div>
+            <div class="scissors">
+                <img src="/img/scissors.png" alt="">
+                <button class="scissors">Scissors</button>
+            </div>
+        </div>
+        <div class="announcements"></div>
+    </div>
+    <div id="scoreBoard">
+        <div class="player">
+            <p>Player Score</p>
+            <p class="playerScore">0</p>
+        </div>
+        <div class="computer">
+            <p>Computer Score</p>
+            <p class="computerScore">0</p>
+        </div>
+    </div>
+
+    <footer>Made by Alex Ambrinos &hearts;</footer>
+
 </body>
 
 </html>
