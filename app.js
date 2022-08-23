@@ -21,7 +21,7 @@ winR.innerHTML = 'You <span class="win">won</span> this round!';
 const loseR = document.createElement('p');
 loseR.innerHTML = 'You <span class="lose">lost</span> this round!';
 const tieR = document.createElement('p');
-tieR.innerHTML = 'it was a <span class="tie">tie</span>!';
+tieR.innerHTML = 'It was a <span class="tie">tie</span>!';
 
 const winM = document.createElement('p');
 winM.innerHTML = 'You <span class="win">won</span> the match! Good job!';
@@ -29,7 +29,7 @@ const replayBtn = document.createElement('button');
 replayBtn.textContent = "Play Again";
 replayBtn.classList.add('replayBtn');
 const loseM = document.createElement('p');
-loseM.innerHTML = 'You <span class="lose">lost</span> the match! Better Luck next Time!';
+loseM.innerHTML = 'You <span class="lose">lost</span> the match! Better luck next time!';
 
 function scoreKeeper(outcome) {
     if (playerScore < 5 && computerScore < 5)
