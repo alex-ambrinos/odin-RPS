@@ -121,3 +121,7 @@ function playRound(playerSelection, computerSelection) {
         return 'player';
     }
 }
+
+document.ondblclick = function (e) {
+    e.preventDefault();
+}
